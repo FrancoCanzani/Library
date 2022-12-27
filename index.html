@@ -8,9 +8,14 @@
     <title>BookBoxed</title>
   </head>
   <body>
+    <!-- Main container -->
     <div class="container">
+      <!-- Header -->
       <header>
-        <img src="/images/logo.png" alt="Logo" />
+        <img
+          src="/images/book-box-logo-zip-file/png/logo-no-background.png"
+          alt="Logo"
+        />
         <button>
           <h2>Add</h2>
           <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
@@ -22,23 +27,25 @@
         </button>
       </header>
 
-      <div class="book-box">
-        <div class="top">
-          <div class="img-box">
-            <svg style="width: 64px; height: 64px" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M9 3V18H12V3H9M12 5L16 18L19 17L15 4L12 5M5 5V18H8V5H5M3 19V21H21V19H3Z"
-              />
-            </svg>
+      <!-- bookshelf with all the books JS generated -->
+      <div class="bookshelf">
+        <div class="book-box">
+          <div class="top">
+            <div class="img-box">
+              <svg style="width: 64px; height: 64px" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M9 3V18H12V3H9M12 5L16 18L19 17L15 4L12 5M5 5V18H8V5H5M3 19V21H21V19H3Z"
+                />
+              </svg>
+            </div>
+            <h1 class="title">The Hobbit</h1>
           </div>
-          <h1 class="title">The Hobbit</h1>
-        </div>
-
-        <div class="content">
-          <div class="author">Author: J.R.R. Tolkien</div>
-          <div class="pages">Pages:</div>
-          <div class="rating">Rating: 🖖🖖🖖🖖</div>
+          <div class="content">
+            <div class="author">Author: J.R.R. Tolkien</div>
+            <div class="pages">Pages: 395</div>
+            <div class="rating">Rating: 🖖🖖🖖🖖</div>
+          </div>
         </div>
       </div>
     </div>
