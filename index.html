@@ -12,11 +12,8 @@
     <div class="container">
       <!-- Header -->
       <header>
-        <img
-          src="/images/book-box-logo-zip-file/png/logo-no-background.png"
-          alt="Logo"
-        />
-        <button>
+        <h1>Book Box</h1>
+        <button onclick="myFunction()">
           <h2>Add</h2>
           <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
             <path
@@ -26,6 +23,35 @@
           </svg>
         </button>
       </header>
+
+      <!-- Pop up form -->
+
+      <div class="popUpForm">
+        <form action="/main.js" method="get">
+          <h1>Let's add a new book!</h1>
+          <div class="title">
+            <label for="title">Title</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Harry Potter"
+              required
+            />
+          </div>
+          <div class="pages">
+            <label for="pages">N° of pages</label>
+            <input type="number" min="0" name="pages" id="pages" required />
+          </div>
+          <div class="date">
+            <label for="date">Date of publication</label>
+            <input type="date" name="Date" id="date" />
+          </div>
+          <div class="submit">
+            <button class="submitButton">Add to my library</button>
+          </div>
+        </form>
+      </div>
 
       <!-- bookshelf with all the books JS generated -->
       <div class="bookshelf">
@@ -39,12 +65,12 @@
                 />
               </svg>
             </div>
-            <h1 class="title">The Hobbit</h1>
+            <h1 class="titleDisplay">The Hobbit</h1>
           </div>
           <div class="content">
             <div class="author">Author: J.R.R. Tolkien</div>
-            <div class="pages">Pages: 395</div>
-            <div class="rating">Rating: 🖖🖖🖖🖖</div>
+            <div class="pagesDisplay">Pages: 395</div>
+            <div class="ratingDisplay">Rating: 🖖🖖🖖🖖</div>
           </div>
         </div>
       </div>
