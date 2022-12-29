@@ -161,14 +161,25 @@ header h1 {
   font-size: 2rem;
   color: white;
   font-weight: bolder;
-  margin-right: 1rem;
 }
 
-header img {
-  max-width: 200px;
+.color-logo {
+  padding-right: 1rem;
 }
 
-.submitButton,
+#submitButton {
+  display: block;
+  margin: 0 auto;
+  background: white;
+  color: black;
+  border-radius: 0.5rem;
+  font-size: 0.6rem;
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
 .addBook {
   display: flex;
   align-items: center;
@@ -176,7 +187,7 @@ header img {
   color: black;
   border-radius: 0.5rem;
   font-size: 0.6rem;
-  max-height: 4rem;
+  height: 3rem;
   font-size: 1rem;
   font-weight: bolder;
   cursor: pointer;
@@ -190,9 +201,6 @@ button:active {
   transform: translateY(2px);
 }
 
-.addBook {
-}
-
 /* Bookshelf */
 
 .bookshelf {
@@ -204,65 +212,31 @@ button:active {
 }
 
 .book-box {
-  height: 170px;
-  width: 220px;
-  transition: all 0.5s;
-  box-shadow: 15px 15px 30px rgba(255, 255, 255, 0.11),
-    -15px -15px 30px rgba(203, 203, 203, 0.082);
+  max-height: 270px;
+  border: 1px solid white;
+  max-width: 320px;
   text-align: center;
   overflow: hidden;
-  background: #e0e1dd;
   border-radius: 0.5rem;
   margin: 1rem;
+  background: #e0e1dd;
 }
 
 .img-box svg {
   color: white;
-  padding-top: 0.5em;
-}
-
-.book-box:hover {
-  height: 300px;
-  background: linear-gradient(360deg, #e5e5e5 60%, rgb(135, 135, 135) 70%);
 }
 
 .book-box .top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  word-wrap: break-word;
-  padding: 1rem;
   border-radius: 0.5rem;
   background: #415a77;
 }
 
-.book-box .top .titleDisplay {
-  font-size: 1.1em;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding-bottom: 1em;
-  transition: all 0.5s;
-  color: white;
-}
-
-.book-box:hover .top {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
-}
-
 .book-box .content {
-  width: 190px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 1em;
-  margin-top: 0.5em;
+  background: #e0e1dd;
+  margin: 1em;
 }
 
 .book-box .content * {
-  width: 190px;
   display: flex;
   justify-content: flex-start;
   padding: 0.4em;
@@ -288,7 +262,7 @@ button.closeForm {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  max-width: 320px;
+  max-width: 350px;
   border-radius: 0.5rem;
   padding: 1rem;
   box-shadow: 3px 3.3px 2.2px rgba(0, 0, 0, 0.031),
@@ -315,14 +289,16 @@ h1.bigTitle {
 .title,
 .pages,
 .date,
-.read {
+.read,
+.author {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
 #title,
-#date {
+#date,
+#author {
   height: 30px;
   max-width: 200px;
   font-weight: bold;
@@ -415,9 +391,9 @@ input[type="radio"]#no:checked + label {
   content: "\2605";
   position: absolute;
   color: #ffea00;
-  font-size: 2vw;
+  font-size: 2rem;
 }
 
 .emoji {
-  font-size: 2vw;
+  font-size: 2rem;
 }
