@@ -211,7 +211,7 @@ button:active {
   flex-wrap: wrap;
 }
 
-.book-box {
+.bookBox {
   max-height: 270px;
   border: 1px solid white;
   max-width: 320px;
@@ -222,24 +222,36 @@ button:active {
   background: #e0e1dd;
 }
 
-.img-box svg {
+.imgBox svg {
   color: white;
 }
 
-.book-box .top {
+.bookBox .top {
   border-radius: 0.5rem;
   background: #415a77;
 }
 
-.book-box .content {
+.bookBox .content {
   background: #e0e1dd;
   margin: 1em;
 }
 
-.book-box .content * {
+.bookBox .content * {
   display: flex;
   justify-content: flex-start;
   padding: 0.4em;
+}
+
+button.delete {
+  border: #000;
+  background: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.delete img {
+  width: 20px;
+  height: 20px;
 }
 
 /* Form */
@@ -288,16 +300,15 @@ h1.bigTitle {
 
 .title,
 .pages,
-.date,
 .read,
-.author {
+.author,
+.date {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
 #title,
-#date,
 #author {
   height: 30px;
   max-width: 200px;
@@ -312,7 +323,8 @@ h1.bigTitle {
   font-style: italic;
 }
 
-#pages {
+#pages,
+#date {
   height: 30px;
   max-width: 50px;
   font-weight: bold;
