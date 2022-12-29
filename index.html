@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+
     <title>BookBoxed</title>
   </head>
   <body>
@@ -13,24 +14,34 @@
       <!-- Header -->
       <header>
         <h1>Book Box</h1>
-        <button onclick="myFunction()">
+        <button class="addBook" onclick="openForm()">
           <h2>Add</h2>
           <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
             <path
               fill="currentColor"
-              d="M17,13H13V17H11V13H7V11H11V7H13V11H17M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z"
+              d="M13.09 20C13.21 20.72 13.46 21.39 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H18C19.11 2 20 2.9 20 4V13.09C19.67 13.04 19.34 13 19 13C18.66 13 18.33 13.04 18 13.09V4H13V12L10.5 9.75L8 12V4H6V20H13.09M20 18V15H18V18H15V20H18V23H20V20H23V18H20Z"
             />
           </svg>
         </button>
       </header>
 
+      <!-- Button to add new books  -->
+
       <!-- Pop up form -->
 
-      <div class="popUpForm">
-        <form action="/main.js" method="get">
-          <h1>Let's add a new book!</h1>
+      <div class="formPopup" id="myForm">
+        <button class="closeForm" onclick="closeForm()">
+          <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M4 20H18V22H4C2.9 22 2 21.11 2 20V6H4V20M20.22 2H7.78C6.8 2 6 2.8 6 3.78V16.22C6 17.2 6.8 18 7.78 18H20.22C21.2 18 22 17.2 22 16.22V3.78C22 2.8 21.2 2 20.22 2M19 13.6L17.6 15L14 11.4L10.4 15L9 13.6L12.6 10L9 6.4L10.4 5L14 8.6L17.6 5L19 6.4L15.4 10L19 13.6Z"
+            />
+          </svg>
+        </button>
+        <form action="" method="get">
+          <h1 class="bigTitle">Let's add a new book!</h1>
           <div class="title">
-            <label for="title">Title</label>
+            <legend for="title">Title</legend>
             <input
               type="text"
               name="title"
@@ -40,12 +51,66 @@
             />
           </div>
           <div class="pages">
-            <label for="pages">N° of pages</label>
+            <legend for="pages">N° of pages</legend>
             <input type="number" min="0" name="pages" id="pages" required />
           </div>
           <div class="date">
-            <label for="date">Date of publication</label>
+            <legend for="date">Date of publication</legend>
             <input type="date" name="Date" id="date" />
+          </div>
+          <div class="read">
+            <legend for="date">Have you finished the book?</legend>
+            <input type="radio" id="yes" name="option" value="yes" /><label
+              for="yes"
+              >Yes</label
+            >
+            <input type="radio" id="no" name="option" value="no" /><label
+              for="no"
+              >No</label
+            >
+          </div>
+          <div class="rating">
+            <legend for="rating">Rating:</legend>
+            <input
+              id="star5"
+              name="star"
+              type="radio"
+              value="5"
+              class="radio-btn hide"
+            />
+            <label for="star5"><span class="emoji">☆</span></label>
+            <input
+              id="star4"
+              name="star"
+              type="radio"
+              value="4"
+              class="radio-btn hide"
+            />
+            <label for="star4"><span class="emoji">☆</span> </label>
+            <input
+              id="star3"
+              name="star"
+              type="radio"
+              value="3"
+              class="radio-btn hide"
+            />
+            <label for="star3"><span class="emoji">☆</span></label>
+            <input
+              id="star2"
+              name="star"
+              type="radio"
+              value="2"
+              class="radio-btn hide"
+            />
+            <label for="star2"><span class="emoji">☆</span></label>
+            <input
+              id="star1"
+              name="star"
+              type="radio"
+              value="1"
+              class="radio-btn hide"
+            />
+            <label for="star1"><span class="emoji">☆</span></label>
           </div>
           <div class="submit">
             <button class="submitButton">Add to my library</button>
@@ -65,7 +130,7 @@
                 />
               </svg>
             </div>
-            <h1 class="titleDisplay">The Hobbit</h1>
+            <h1 class="titleDisplay">El Hobbit, un viaje inesperado.</h1>
           </div>
           <div class="content">
             <div class="author">Author: J.R.R. Tolkien</div>
