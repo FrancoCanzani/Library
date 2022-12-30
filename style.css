@@ -150,47 +150,37 @@ body {
 /* Header */
 
 header {
-  top: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
+  min-height: 300px;
   padding: 1rem;
+  background: url(/images/bg_image.webp);
+  background-size: cover;
+  box-shadow: inset 15px 15px 50px 100px #1b263b;
+  background-repeat: no-repeat;
 }
 
-header h1 {
-  font-size: 2rem;
+.brand h1 {
+  font-size: 3rem;
   color: white;
   font-weight: bolder;
 }
 
-.color-logo {
-  padding-right: 1rem;
-}
-
-#submitButton {
-  display: block;
-  margin: 0 auto;
-  background: white;
-  color: black;
-  border-radius: 0.5rem;
-  font-size: 0.6rem;
-  height: 3rem;
-  font-size: 1rem;
-  font-weight: bolder;
-  cursor: pointer;
+.brand {
+  display: flex;
+  align-items: center;
 }
 
 .addBook {
   display: flex;
   align-items: center;
   background: white;
-  color: black;
-  border-radius: 0.5rem;
-  font-size: 0.6rem;
+  border-radius: 2rem;
   height: 3rem;
   font-size: 1rem;
   font-weight: bolder;
   cursor: pointer;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
 }
 
 button * {
@@ -202,6 +192,13 @@ button:active {
 }
 
 /* Bookshelf */
+
+.yourBooks {
+  font-size: 2rem;
+  color: white;
+  font-weight: bolder;
+  padding: 1rem;
+}
 
 .bookshelf {
   width: 100%;
@@ -300,7 +297,6 @@ h1.bigTitle {
 
 .title,
 .pages,
-.read,
 .author,
 .date {
   display: flex;
@@ -334,6 +330,18 @@ h1.bigTitle {
   border: 1px solid transparent;
 }
 
+#submitButton {
+  display: block;
+  margin: 0 auto;
+  background: white;
+  color: black;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  height: 3rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
 legend {
   font-weight: bold;
   color: black;
@@ -343,14 +351,10 @@ legend {
 div .submit {
   margin-top: 1rem;
 }
+
 .submitButton {
   margin: 0 auto;
   padding: 0.5rem;
-}
-
-.read {
-  display: inline-block;
-  position: relative;
 }
 
 input[type="radio"] {
@@ -359,14 +363,15 @@ input[type="radio"] {
 
 .read label {
   display: inline-block;
+  margin-bottom: 0.5rem;
   width: 50px;
-  height: 20px;
+  height: 30px;
   background-color: white;
   font-weight: bold;
   border-radius: 0.2rem;
-  text-align: center;
-  line-height: 20px;
   cursor: pointer;
+  text-align: center;
+  line-height: 30px; /* Set the line-height to the same height as the parent element */
 }
 
 input[type="radio"]#yes:checked + label {

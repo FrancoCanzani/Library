@@ -13,17 +13,20 @@
     <div class="container">
       <!-- Header -->
       <header>
-        <h1>Book Box</h1>
-        <svg
-          class="color-logo"
-          style="width: 64px; height: 64px"
-          viewBox="0 0 24 24"
-        >
-          <path fill="#ffffff" d="M9 3V18H12V3H9" />
-          <path fill="#ffd500" d="M12 5L16 18L19 17L15 4L12 5" />
-          <path fill="#ef233c" d="M5 5V18H8V5H5" />
-          <path fill="#00509d" d="M3 19V21H21V19H3Z" />
-        </svg>
+        <div class="brand">
+          <svg
+            class="color-logo"
+            style="width: 64px; height: 64px"
+            viewBox="0 0 24 24"
+          >
+            <path fill="#ffffff" d="M9 3V18H12V3H9" />
+            <path fill="#ffd500" d="M12 5L16 18L19 17L15 4L12 5" />
+            <path fill="#ef233c" d="M5 5V18H8V5H5" />
+            <path fill="#00509d" d="M3 19V21H21V19H3Z" />
+          </svg>
+          <h1>BookBox</h1>
+        </div>
+
         <button class="addBook" onclick="openForm()">
           <h2>Add</h2>
           <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
@@ -146,6 +149,8 @@
       </div>
 
       <!-- bookshelf with all the books JS generated -->
+
+      <h1 class="yourBooks">Your books</h1>
       <div class="bookshelf">
         <div class="bookBox">
           <div class="top">
