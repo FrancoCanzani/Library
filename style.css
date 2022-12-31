@@ -143,28 +143,39 @@ body {
 .container {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 /* Header */
 
 header {
-  min-height: 300px;
-  padding: 1rem;
-  background: url(/images/bg_image.webp);
+  min-height: 600px;
+  width: 100%;
+  background: url(/images/bg-img-2.jpg);
   background-size: cover;
   box-shadow: inset 15px 15px 50px 100px #1b263b;
   background-repeat: no-repeat;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .brand h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
   font-weight: bolder;
 }
 
-.brand {
+.brand .color-logo {
+  transform: scale(1.2);
+}
+
+.top {
+  padding: 1rem;
   display: flex;
   align-items: center;
 }
@@ -172,15 +183,35 @@ header {
 .addBook {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: white;
-  border-radius: 2rem;
+  border-radius: 50%;
   height: 3rem;
-  font-size: 1rem;
-  font-weight: bolder;
+  width: 3rem;
   cursor: pointer;
   position: fixed;
   right: 10px;
   bottom: 10px;
+}
+
+.links {
+  position: absolute;
+  right: 2vw;
+}
+
+a.headerLink {
+  text-decoration: none;
+  color: #ced4da;
+  margin: 0.3rem;
+  font-size: 0.9rem;
+}
+
+a.headerLink:hover {
+  color: white;
+}
+
+.addBook:hover {
+  border: 3px solid white;
 }
 
 button * {
@@ -209,9 +240,8 @@ button:active {
 }
 
 .bookBox {
-  max-height: 270px;
   border: 1px solid white;
-  max-width: 320px;
+  max-height: 260px;
   text-align: center;
   overflow: hidden;
   border-radius: 0.5rem;
@@ -226,6 +256,10 @@ button:active {
 .bookBox .top {
   border-radius: 0.5rem;
   background: #415a77;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 2.5rem;
 }
 
 .bookBox .content {
@@ -236,7 +270,8 @@ button:active {
 .bookBox .content * {
   display: flex;
   justify-content: flex-start;
-  padding: 0.4em;
+  padding: 0.3em;
+  font-weight: bold;
 }
 
 button.delete {

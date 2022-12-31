@@ -5,30 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
 
-    <title>BookBoxed</title>
+    <title>BookBox</title>
   </head>
   <body>
     <!-- Main container -->
     <div class="container">
       <!-- Header -->
       <header>
-        <div class="brand">
-          <svg
-            class="color-logo"
-            style="width: 64px; height: 64px"
-            viewBox="0 0 24 24"
-          >
-            <path fill="#ffffff" d="M9 3V18H12V3H9" />
-            <path fill="#ffd500" d="M12 5L16 18L19 17L15 4L12 5" />
-            <path fill="#ef233c" d="M5 5V18H8V5H5" />
-            <path fill="#00509d" d="M3 19V21H21V19H3Z" />
-          </svg>
-          <h1>BookBox</h1>
-        </div>
+        <div class="top">
+          <div class="brand">
+            <svg
+              class="color-logo"
+              style="width: 64px; height: 64px"
+              viewBox="0 0 24 24"
+            >
+              <path fill="#ffffff" d="M9 3V18H12V3H9" />
+              <path fill="#ffd500" d="M12 5L16 18L19 17L15 4L12 5" />
+              <path fill="#ef233c" d="M5 5V18H8V5H5" />
+              <path fill="#00509d" d="M3 19V21H21V19H3Z" />
+            </svg>
+            <h1>
+              Book <br />
+              Box
+            </h1>
+          </div>
 
+          <div class="links">
+            <a class="headerLink" href="#">Sign in</a>
+            <a class="headerLink" href="#">Create account</a>
+            <a class="headerLink" href="#">Newsletter</a>
+          </div>
+          
         <button class="addBook" onclick="openForm()">
-          <h2>Add</h2>
           <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
             <path
               fill="currentColor"
