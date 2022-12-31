@@ -4,6 +4,7 @@ const yes = document.getElementById("yes");
 const no = document.getElementById("no");
 const bookshelf = document.querySelector(".bookshelf");
 const ratingInput = document.querySelector('input[name="star"]:checked');
+const addBook = document.querySelector(".addBook");
 
 let myLibrary = [];
 
@@ -30,7 +31,6 @@ function createBook() {
     form.star.value
   );
   myLibrary.push(newBook);
-  console.log(myLibrary);
   addBookToLibrary();
   title.value = "";
   author.value = "";

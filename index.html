@@ -37,18 +37,8 @@
             <a class="headerLink" href="#">Create account</a>
             <a class="headerLink" href="#">Newsletter</a>
           </div>
-          
-        <button class="addBook" onclick="openForm()">
-          <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M13.09 20C13.21 20.72 13.46 21.39 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H18C19.11 2 20 2.9 20 4V13.09C19.67 13.04 19.34 13 19 13C18.66 13 18.33 13.04 18 13.09V4H13V12L10.5 9.75L8 12V4H6V20H13.09M20 18V15H18V18H15V20H18V23H20V20H23V18H20Z"
-            />
-          </svg>
-        </button>
+        </div>
       </header>
-
-      <!-- Button to add new books  -->
 
       <!-- Pop up form -->
 
@@ -160,31 +150,20 @@
 
       <!-- bookshelf with all the books JS generated -->
 
-      <h1 class="yourBooks">Your books</h1>
-      <div class="bookshelf">
-        <div class="bookBox">
-          <div class="top">
-            <div class="imgBox">
-              <svg style="width: 64px; height: 64px" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M9 3V18H12V3H9M12 5L16 18L19 17L15 4L12 5M5 5V18H8V5H5M3 19V21H21V19H3Z"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="content">
-            <div class="titleDisplay">Title: The Hobbit</div>
-            <div class="authorDisplay">Author: J.R.R. Tolkien</div>
-            <div class="pagesDisplay">Pages: 395</div>
-            <div class="dateDisplay">Date: 20-12-1953</div>
-            <div class="ratingDisplay">Rating: ☆☆☆☆</div>
-            <button class="delete">
-              <img class="deleteBtn" src="/images/trash.svg" alt="delete" />
-            </button>
-          </div>
-        </div>
+      <div class="yourBooks">
+        <h1 class="yourBooks">Your books</h1>
+        <button class="addBook" onclick="openForm()">
+          <h3>New Book</h3>
+          <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M13.09 20C13.21 20.72 13.46 21.39 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H18C19.11 2 20 2.9 20 4V13.09C19.67 13.04 19.34 13 19 13C18.66 13 18.33 13.04 18 13.09V4H13V12L10.5 9.75L8 12V4H6V20H13.09M20 18V15H18V18H15V20H18V23H20V20H23V18H20Z"
+            />
+          </svg>
+        </button>
       </div>
+
+      <div class="bookshelf"></div>
     </div>
 
     <script src="/main.js"></script>

@@ -180,23 +180,10 @@ header {
   align-items: center;
 }
 
-.addBook {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
-  cursor: pointer;
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-}
-
 .links {
   position: absolute;
   right: 2vw;
+  font-weight: bolder;
 }
 
 a.headerLink {
@@ -210,8 +197,8 @@ a.headerLink:hover {
   color: white;
 }
 
-.addBook:hover {
-  border: 3px solid white;
+button {
+  border: none;
 }
 
 button * {
@@ -222,14 +209,45 @@ button:active {
   transform: translateY(2px);
 }
 
-/* Bookshelf */
+button:hover {
+  border: 2px solid black;
+}
 
-.yourBooks {
+/* Title + add book button */
+
+.yourBooks h1 {
   font-size: 2rem;
   color: white;
   font-weight: bolder;
   padding: 1rem;
 }
+
+.yourBooks {
+  display: flex;
+  align-items: center;
+}
+
+.yourBooks h3 {
+  font-size: 1.2rem;
+}
+
+.addBook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #38b000;
+  color: white;
+}
+
+.addBook:hover {
+  background-color: #008000;
+  border: none;
+}
+
+/* Bookshelf */
 
 .bookshelf {
   width: 100%;
@@ -237,6 +255,7 @@ button:active {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  min-height: 200px;
 }
 
 .bookBox {
@@ -323,7 +342,7 @@ button.closeForm {
 
 h1.bigTitle {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   font-weight: bolder;
   margin-bottom: 1rem;
   font-style: italic;
