@@ -53,6 +53,7 @@ function addBookToLibrary() {
   const pagesDisplay = document.createElement("div");
   const dateDisplay = document.createElement("div");
   const ratingDisplay = document.createElement("div");
+  const readDisplay = document.createElement("button");
   const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
   const deleteButton = document.createElement("button");
   const deleteBtn = document.createElement("img");
@@ -79,6 +80,7 @@ function addBookToLibrary() {
   content.appendChild(pagesDisplay);
   content.appendChild(dateDisplay);
   content.appendChild(ratingDisplay);
+  content.appendChild(readDisplay);
   top.appendChild(imgBox);
   imgBox.appendChild(svg);
   svg.appendChild(path);
@@ -103,6 +105,25 @@ function addBookToLibrary() {
   dateDisplay.textContent = `Publication date: ${form.date.value}`;
   ratingDisplay.textContent = `Rating: ${form.star.value}/5`;
 
+  if (form.read.value === "yes") {
+    readDisplay.textContent = "Finished";
+    readDisplay.classList.add("readDisplayFinished");
+  } else {
+    readDisplay.textContent = "Not Finished";
+    readDisplay.classList.add("readDisplayUnfinished");
+  }
+
+  readDisplay.addEventListener("click", function () {
+    this.classList.toggle("readDisplayFinished");
+    this.classList.toggle("readDisplayUnfinished");
+
+    if (this.textContent === "Finished") {
+      this.textContent = "Not Finished";
+    } else {
+      this.textContent = "Finished";
+    }
+  });
+
   // Delete the div when clicked on the icon
   deleteButton.addEventListener("click", function () {
     const index = myLibrary.findIndex(
@@ -112,7 +133,6 @@ function addBookToLibrary() {
     // Remove the book object from the myLibrary array
     myLibrary.splice(index, 1);
     bookBox.remove();
-    console.log(myLibrary);
   });
 }
 
